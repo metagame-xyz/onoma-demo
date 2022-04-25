@@ -7,7 +7,7 @@ export interface MetaProps {
     type?: string
 }
 
-const description = 'DESCRIPTION'
+const description = `Onomastics is the study of the history and origin of proper names, especially personal names. For addresses that don't have an ENS yet (or never will), it's much easier to read and remember a name than a hexadecimal address.`
 
 export const headMetadata: MetaProps = {
     title: 'TITLE',
@@ -17,8 +17,8 @@ export const headMetadata: MetaProps = {
 }
 
 export const copy = {
-    title: 'TITLE',
-    nameLowercase: 'NAME_LOWERCASE',
+    title: 'Onoma Names',
+    nameLowercase: 'onomanames',
     heroSubheading: description,
     heading1: 'HEADING 1',
     text1: 'TEXT 1',
@@ -26,6 +26,6 @@ export const copy = {
     text2: 'TEXT 2',
     heading3: 'HEADING 3',
     text3: 'TEXT 3',
-    bottomSectonHeading: 'bottomSectonHeading',
-    bottomSectionText: `bottomSectionText`,
+    bottomSectionHeading: 'What is Metagame?',
+    bottomSectionText: `Whether you know it or not, you're already playing The Metagame. It is the actions you take both in the hyperverse, and in the physical world that earn you experience or currency, level up your skills, or add to your inventory. Metagame makes those actions more legible, and lets you represent them in a fun way. You can mint Metagame’s phase 1 earned NFTs at `,
 }

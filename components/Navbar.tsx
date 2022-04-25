@@ -2,10 +2,48 @@ import React from 'react'
 
 import { Avatar, Box, Button, Flex, Heading, HStack, Spacer, Text, useBreakpointValue } from '@chakra-ui/react'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
+import { addressToName } from 'onoma'
 
 import { copy } from 'utils/content'
 
 import { Etherscan, Logo, Opensea, Twitter } from 'components/Icons'
+
+const CustomButton = () => (
+    <>
+        <ConnectButton.Custom>
+            {({ account, chain, openAccountModal, openChainModal, openConnectModal }) =>
+                !account ? (
+                    <button onClick={openConnectModal} type="button">
+                        Connect Wallet
+                    </button>
+                ) : (
+                    <div style={{ display: 'flex', gap: 12 }}>
+                        {chain && (
+                            <button
+                                onClick={openChainModal}
+                                style={{ display: 'flex', alignItems: 'center' }}
+                                type="button"
+                            >
+                                {chain.iconUrl && (
+                                    <img
+                                        alt={chain.name ?? 'Chain icon'}
+                                        src={chain.iconUrl}
+                                        style={{ width: 12, height: 12, marginRight: 4 }}
+                                    />
+                                )}
+                                {chain.name ?? chain.id}
+                                {chain.unsupported && ' (unsupported)'}
+                            </button>
+                        )}
+                        <button onClick={openAccountModal} type="button">
+                            {account.ensName || addressToName(account.address)}
+                        </button>
+                    </div>
+                )
+            }
+        </ConnectButton.Custom>
+    </>
+)
 
 function Navbar(props) {
     // const { userName, openWeb3Modal, avatarUrl } = useEthereum();
@@ -28,9 +66,6 @@ function Navbar(props) {
                 </HStack>
                 <Spacer />
                 <HStack align="center" spacing={[3, 4, 5, 6]}>
-                    <Twitter />
-                    <Opensea />
-                    <Etherscan />
                     {userName ? (
                         <Box bgColor="brand.700" color="white" px={4} py={3} borderRadius="full">
                             <HStack>
