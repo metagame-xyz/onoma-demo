@@ -8,7 +8,7 @@ import { addressToName } from 'onoma'
 
 import { copy } from 'utils/content'
 
-import { Logo, Twitter } from 'components/Icons'
+import { Twitter } from 'components/Icons'
 
 const CustomButton = () => (
     <>
