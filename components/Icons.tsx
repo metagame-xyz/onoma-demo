@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Icon, Link } from '@chakra-ui/react'
 
-import { CONTRACT_ADDRESS, networkStrings } from 'utils/constants'
+import { networkStrings } from 'utils/constants'
 import { copy } from 'utils/content'
 
 function IconLink({ Icon, url, ...props }) {
@@ -19,9 +19,9 @@ function IconLink({ Icon, url, ...props }) {
     )
 }
 
-const etherscanUrl = `https://${networkStrings.etherscan}etherscan.io/address/${CONTRACT_ADDRESS}`
+// const etherscanUrl = `https://${networkStrings.etherscan}etherscan.io/address/${CONTRACT_ADDRESS}`
 const twitterUrl = 'https://twitter.com/The_Metagame'
-const openseaUrl = `https://opensea.io/collection/heartbeat-metagame`
+// const openseaUrl = `https://opensea.io/collection/heartbeat-metagame`
 
 const EtherscanIcon = (props) => (
     <Icon viewBox="0 0 52 52" {...props}>
@@ -116,8 +116,8 @@ export const TwitterSquare = (props) => (
 )
 
 export const Twitter = (props) => <IconLink Icon={TwitterSquare} url={twitterUrl} {...props} />
-export const Opensea = (props) => <IconLink Icon={OpenseaSquare} url={openseaUrl} {...props} />
-export const Etherscan = (props) => <IconLink Icon={EtherscanIcon} url={etherscanUrl} {...props} />
+// export const Opensea = (props) => <IconLink Icon={OpenseaSquare} url={openseaUrl} {...props} />
+// export const Etherscan = (props) => <IconLink Icon={EtherscanIcon} url={etherscanUrl} {...props} />
 
 export const TwelveCircles = (props) => (
     <Icon viewBox="0 0 336 338" {...props}>

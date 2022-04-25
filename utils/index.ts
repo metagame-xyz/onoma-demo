@@ -12,7 +12,6 @@ import {
     ALCHEMY_NOTIFY_TOKEN,
     ALCHEMY_PROJECT_ID,
     ETHERSCAN_API_KEY,
-    EVENT_FORWARDER_AUTH_TOKEN,
     INFURA_PROJECT_ID,
     networkStrings,
     POCKET_NETWORK_API_KEY,
@@ -40,17 +39,6 @@ export const defaultMainnetProvider = getDefaultProvider('homestead', {
         applicationSecretKey: POCKET_NETWORK_API_KEY,
     },
 })
-
-export const isValidEventForwarderSignature = (request: NextApiRequest) => {
-    const token = EVENT_FORWARDER_AUTH_TOKEN
-    const headers = request.headers
-    const signature = headers['x-event-forwarder-signature']
-    const body = request.body
-    const hmac = createHmac('sha256', token) // Create a HMAC SHA256 hash using the auth token
-    hmac.update(JSON.stringify(body), 'utf8') // Update the token hash with the request body using utf8
-    const digest = hmac.digest('hex')
-    return signature === digest
-}
 
 export const isValidAlchemySignature = (request: NextApiRequest) => {
     if (process.env.VERCEL_ENV !== 'production') {

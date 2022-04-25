@@ -6,7 +6,7 @@ import { addressToName } from 'onoma'
 
 import { copy } from 'utils/content'
 
-import { Etherscan, Logo, Opensea, Twitter } from 'components/Icons'
+import { Logo, Twitter } from 'components/Icons'
 
 const CustomButton = () => (
     <>

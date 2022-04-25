@@ -4,13 +4,6 @@ export const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
 // export const FTMSCAN_API_KEY = process.env.FTMSCAN_API_KEY;
 // export const SNOWTRACE_API_KEY = process.env.SNOWTRACE_API_KEY;
 
-export const REDIS_URL = process.env.REDIS_URL
-export const EVENT_FORWARDER_AUTH_TOKEN = process.env.EVENT_FORWARDER_AUTH_TOKEN
-export const EVENT_FORWARDER_AUTH_TOKEN_HEADER = 'x-event-forwarder-auth-token'
-export const INFURA_IPFS_PROJECT_ID = process.env.INFURA_IPFS_PROJECT_ID
-export const INFURA_IPFS_SECRET = process.env.INFURA_IPFS_SECRET
-export const INFURA_IPFS_PROJECT_ID_HEADER = `x-ipfs-project-id`
-export const INFURA_IPFS_SECRET_HEADER = `x-ipfs-project-secret`
 export const POCKET_NETWORK_API_KEY = process.env.POCKET_NETWORK_API_KEY
 export const POCKET_NETWORK_ID = process.env.POCKET_NETWORK_ID
 export const ALCHEMY_NOTIFY_TOKEN = process.env.ALCHEMY_NOTIFY_TOKEN
@@ -19,7 +12,6 @@ export const DATADOG_API_KEY = process.env.DATADOG_API_KEY
 export const SLACK_API_TOKEN = process.env.SLACK_API_TOKEN
 
 /* Frontend Constants */
-export const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS.toLowerCase()
 export const NETWORK = process.env.NEXT_PUBLIC_NETWORK.toLowerCase()
 export const INFURA_PROJECT_ID = process.env.NEXT_PUBLIC_INFURA_PROJECT_ID
 export const ALCHEMY_PROJECT_ID = process.env.NEXT_PUBLIC_ALCHEMY_PROJECT_ID

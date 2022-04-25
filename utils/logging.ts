@@ -27,7 +27,7 @@ const prodFormat = printf(
 )
 const localTransports = [new winston.transports.Console({ level: 'debug' })]
 
-const service = process.env.VERCEL_ENV === 'production' ? 'heartbeat-logger' : 'heartbeat-dev-logger'
+const service = process.env.VERCEL_ENV === 'production' ? 'onoma-logger' : 'onoma-dev-logger'
 
 const datadogTransport = new DatadogWinston({
     apiKey: DATADOG_API_KEY,
