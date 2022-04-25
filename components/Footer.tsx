@@ -1,6 +1,6 @@
 import { Center, Flex, Grid, Link, Stack, Text } from '@chakra-ui/react'
 
-import { Etherscan, Opensea, TwelveCircles, Twitter } from './Icons'
+import { TwelveCircles, Twitter } from './Icons'
 
 const hover = { color: 'brand.300' }
 

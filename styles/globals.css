@@ -16,15 +16,3 @@ a {
 * {
     box-sizing: border-box;
 }
-
-.gui {
-    position: absolute;
-    top: 0;
-    right: 0;
-    /* bottom: 0; */
-    pointer-events: none;
-}
-
-#heart > .gui {
-    pointer-events: all;
-}

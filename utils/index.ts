@@ -4,8 +4,6 @@ import { getDefaultProvider } from '@ethersproject/providers'
 // import { WebClient } from '@slack/web-api';
 import { createHmac } from 'crypto'
 import { ethers } from 'ethers'
-import Redis from 'ioredis'
-import fetch from 'node-fetch-retry'
 
 // import fetch, { Response } from 'node-fetch';
 import { logger } from 'utils/logging'
@@ -19,7 +17,6 @@ import {
     networkStrings,
     POCKET_NETWORK_API_KEY,
     POCKET_NETWORK_ID,
-    REDIS_URL,
 } from './constants'
 
 // const slackClient = new WebClient(SLACK_API_TOKEN);
@@ -75,8 +72,6 @@ export const checkSignature = (message: string, joinedSignature: string, walletA
     const recoveredAddress = ethers.utils.recoverAddress(digest, signature)
     return walletAddress === recoveredAddress
 }
-
-export const ioredisClient = new Redis(REDIS_URL)
 
 export const tsToMonthAndYear = (ts: number): string => {
     const date = ts ? new Date(ts * 1000) : new Date()

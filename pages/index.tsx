@@ -9,7 +9,6 @@ import { useAccount } from 'wagmi'
 
 import { copy } from 'utils/content'
 import { debug, event } from 'utils/frontend'
-import { Metadata } from 'utils/metadata'
 
 import { maxW } from 'components/Layout'
 
