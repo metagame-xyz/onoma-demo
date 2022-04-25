@@ -1,7 +1,9 @@
+// import Image from 'next/image'
 import React from 'react'
 
-import { Avatar, Box, Button, Flex, Heading, HStack, Spacer, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Avatar, Box, Button, Flex, Heading, HStack, Image, Spacer, Text, useBreakpointValue } from '@chakra-ui/react'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
+import onomaLogo from 'images/onoma-logo.png'
 import { addressToName } from 'onoma'
 
 import { copy } from 'utils/content'
@@ -57,7 +59,7 @@ function Navbar(props) {
         <Flex width="100%" bgColor="transparent" boxShadow="md">
             <HStack as="nav" width="100%" margin="auto" justify="center" align="center" p={4} {...props}>
                 <HStack align="center" spacing={2} pr={[0, 2]}>
-                    <Logo boxSize={10} />
+                    <Image src={onomaLogo.src} alt="Onoma Logo" boxSize={10} />
                     {showName && (
                         <Heading as="h1" fontSize="34px">
                             {copy.title}

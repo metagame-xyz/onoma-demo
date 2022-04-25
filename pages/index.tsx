@@ -32,22 +32,28 @@ function Home() {
                 <title>{copy.title}</title>
             </Head>
             <Box px={8} pt={8} width="fit-content" mx="auto" maxW={maxW}>
-                <Heading as="h1" fontSize={[54, 72, 96]} textAlign="center" color="brand.900">
-                    {copy.title}
+                <Heading as="h2" fontSize={[32, 48, 54]} textAlign="center" color="brand.900">
+                    Human-readable names for hexadecimal addresses
                 </Heading>
-                <Text fontSize={[16, 22, 30]} fontWeight="light" maxW={['container.md']} pb={4}>
-                    {copy.heroSubheading}
-                    <br />
-                    <br />
-                    {account ? addressToNameObject(account.address).name : null}
+                <Heading as="h2" fontSize={[24, 32, 48]} textAlign="center" color="brand.900">
+                    What is Onoma?
+                </Heading>
+                <Text fontSize={[16, 20, 24]} textAlign="center" color="brand.900">
+                    {`Onoma is an npm package to turn any EVM wallet address into a human-readable name. During Metagame's
+                    work on making transactions easier to read, we found ourselves using the first 6 Hex characters of
+                    an address as the wallet/contract's "name" when an address didn’t have an ENS associated with it.
+                    This is much harder to make an association with than a real name, so thought we'd give every wallet
+                    a name.`}
                 </Text>
-                <div
-                    style={{
-                        aspectRatio: '1/1',
-                        width: '80%',
-                        maxWidth: '800px',
-                    }}
-                ></div>
+                <Heading as="h2" fontSize={[24, 32, 48]} textAlign="center" color="brand.900">
+                    Why is it called Onoma?
+                </Heading>
+                <Text fontSize={[16, 20, 24]} textAlign="center" color="brand.900">
+                    Onomastics is the study of the history and origin of proper names, especially personal names.
+                    (shoutout to @0xmts for the name)
+                </Text>
+
+                {account ? addressToNameObject(account.address).name : null}
             </Box>
 
             <VStack justifyContent="center" spacing={4} px={4} py={8}>

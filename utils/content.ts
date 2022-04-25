@@ -10,14 +10,14 @@ export interface MetaProps {
 const description = `Onomastics is the study of the history and origin of proper names, especially personal names. For addresses that don't have an ENS yet (or never will), it's much easier to read and remember a name than a hexadecimal address.`
 
 export const headMetadata: MetaProps = {
-    title: 'TITLE',
+    title: 'Onoma: Human-readable names for hexadecimal addresses',
     description,
     image: `https://${WEBSITE_URL}/site-preview.png`,
     type: 'website',
 }
 
 export const copy = {
-    title: 'Onoma Names',
+    title: 'Onoma',
     nameLowercase: 'onomanames',
     heroSubheading: description,
     heading1: 'HEADING 1',
