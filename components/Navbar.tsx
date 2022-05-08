@@ -76,7 +76,7 @@ function Navbar(props) {
                             </HStack>
                         </Box>
                     ) : (
-                        <ConnectButton />
+                        <ConnectButton showBalance={false} />
                         // <Button
                         //     onClick={() => openWeb3Modal('Navbar')}
                         //     fontWeight="normal"
