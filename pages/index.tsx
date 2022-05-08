@@ -140,7 +140,7 @@ function Home() {
                                     <Td>{name.firstName}</Td>
                                 </Tr>
                                 <Tr>
-                                    <Td>Middle Name Name</Td>
+                                    <Td>Middle Name</Td>
                                     <Td>{name.middleName}</Td>
                                 </Tr>
                                 <Tr>
