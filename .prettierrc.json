@@ -10,6 +10,7 @@
         "^api/(.*)$",
         "^utils(.*)$",
         "^components/(.*)$",
+        "^styles/(.*)$",
         "^[./]"
     ],
     "importOrderSeparation": true,
