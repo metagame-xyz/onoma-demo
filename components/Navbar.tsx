@@ -1,14 +1,12 @@
 // import Image from 'next/image'
 import React from 'react'
 
-import { Avatar, Box, Button, Flex, Heading, HStack, Image, Spacer, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Avatar, Box, Flex, Heading, HStack, Image, Spacer, Text, useBreakpointValue } from '@chakra-ui/react'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import onomaLogo from 'images/onoma-logo.png'
 import { addressToName } from 'onoma'
 
 import { copy } from 'utils/content'
-
-import { Twitter } from 'components/Icons'
 
 const CustomButton = () => (
     <>

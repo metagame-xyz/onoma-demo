@@ -1,36 +1,25 @@
 import Head from 'next/head'
 import React, { useEffect, useRef, useState } from 'react'
 
-import { ExternalLinkIcon } from '@chakra-ui/icons'
 import {
-    AccordionButton,
     Box,
-    Button,
-    Center,
-    Divider,
     Heading,
     Link,
-    SimpleGrid,
     Table,
-    TableCaption,
     TableContainer,
     Tbody,
     Td,
     Text,
-    Tfoot,
     Th,
     Thead,
     Tr,
     useInterval,
-    VStack,
 } from '@chakra-ui/react'
-import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { ethers } from 'ethers'
-import { addressToName, addressToNameObject, NameObject } from 'onoma'
+import { addressToName, addressToNameObject } from 'onoma'
 import { useAccount } from 'wagmi'
 
 import { copy } from 'utils/content'
-import { debug, event } from 'utils/frontend'
 
 import { maxW } from 'components/Layout'
 
@@ -40,8 +29,6 @@ function Home() {
     let [randomName, setRandomName] = useState(addressToName(ethers.Wallet.createRandom().address))
     let [scrolled, setScrolled] = useState(false)
 
-    console.log('rendering home')
-
     const nameTableRef = useRef(null)
 
     const executeScroll = () => nameTableRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -50,7 +37,6 @@ function Home() {
         const wallet = ethers.Wallet.createRandom()
         const name = addressToName(wallet.address)
         setRandomName(name)
-        console.log('name', name, Date.now())
     }
 
     useInterval(

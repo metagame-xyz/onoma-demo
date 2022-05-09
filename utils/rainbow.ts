@@ -1,5 +1,5 @@
 import { apiProvider, configureChains, getDefaultWallets } from '@rainbow-me/rainbowkit'
-import { chain, createClient, WagmiProvider } from 'wagmi'
+import { chain, createClient } from 'wagmi'
 
 import { ALCHEMY_PROJECT_ID } from 'utils/constants'
 
