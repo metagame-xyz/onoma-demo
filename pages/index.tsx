@@ -135,6 +135,16 @@ function Home() {
                         </TableContainer>
                     </>
                 )}
+                <Heading fontSize={[28, 32, 48]} mb={4}>
+                    {`How do I use Onoma in my app?`}
+                </Heading>
+                <Text fontSize={[20, 20, 24]} mb={12}>
+                    {`It's an npm package! Check out the `}
+                    <Link isExternal textDecor="underline" href="https://github.com/the-metagame/onoma">
+                        Github repo
+                    </Link>
+                    {'.'}
+                </Text>
                 <Box borderRadius={3} bg="brand.700" h={2}></Box>
             </Box>
             <Box px={8} py={12} width="fit-content" margin="auto" maxW={maxW}>
