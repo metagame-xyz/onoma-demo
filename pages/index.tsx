@@ -119,7 +119,7 @@ function Home() {
                             fontSize={[20, 24, 28]}
                             mb={4}
                         >{`${name.prefix} ${name.firstName} ${name.middleName} ${name.lastName}`}</Heading>
-                        <TableContainer margin="auto" maxW="sm" mb={8}>
+                        <TableContainer margin="auto" maxW="sm" mb={12}>
                             <Table variant="simple">
                                 <Thead>
                                     <Tr>
