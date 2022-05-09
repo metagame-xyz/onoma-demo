@@ -11,7 +11,7 @@ const { provider, chains } = configureChains(
 const { connectors } = getDefaultWallets({ appName: 'Onoma', chains })
 
 const wagmiClient = createClient({
-    autoConnect: true,
+    autoConnect: false,
     provider,
     connectors,
 })

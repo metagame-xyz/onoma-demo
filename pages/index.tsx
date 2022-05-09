@@ -52,16 +52,13 @@ function Home() {
         setRandomName(name)
         console.log('name', name, Date.now())
     }
-    // useEffect(() => {
-    //     return () => clearInterval(interval)
-    // }, [])
 
     useInterval(
         () => {
             getAndSetRandomAddress()
             setScrolled(false)
         },
-        !account ? 1200 : null,
+        account ? null : 1200,
     )
 
     useEffect(() => {
@@ -87,20 +84,20 @@ function Home() {
                 {account && name?.name}
             </Heading>
             <Box px={4} pt={8} mx="auto" maxW={maxW}>
-                <Heading fontSize={[24, 32, 48]} mb={4}>
+                <Heading fontSize={[28, 32, 48]} mb={4}>
                     What is Onoma?
                 </Heading>
-                <Text fontSize={[16, 20, 24]} mb={12}>
+                <Text fontSize={[20, 20, 24]} mb={12}>
                     {`Onoma is an npm package to turn any EVM wallet address into a human-readable name. During Metagame's
                     work on making transactions easier to read, we found ourselves using the first 6 Hex characters of
                     an address as the wallet/contract's "name" when an address didn’t have an ENS associated with it.
                     This is much harder to make an association with than a real name, so thought we'd give every wallet
                     a name.`}
                 </Text>
-                <Heading fontSize={[24, 32, 48]} mb={4}>
+                <Heading fontSize={[28, 32, 48]} mb={4}>
                     Why is it called Onoma?
                 </Heading>
-                <Text fontSize={[16, 20, 24]} mb={12}>
+                <Text fontSize={[20, 20, 24]} mb={12}>
                     {`Onomastics is the study of the history and origin of proper names, especially personal names.
                     (shoutout to `}
                     <Link isExternal textDecor="underline" href="https://twitter.com/0xmts">
@@ -108,11 +105,11 @@ function Home() {
                     </Link>
                     {` for the name)`}
                 </Text>
-                <Heading fontSize={[24, 32, 48]} mb={4}>
+                <Heading fontSize={[28, 32, 48]} mb={4}>
                     {`What is my address's Onoma?`}
                 </Heading>
-                <Text fontSize={[16, 20, 24]} mb={12}>
-                    {`Connect your wallet to find out!`}
+                <Text fontSize={[20, 20, 24]} mb={12}>
+                    {!account && `Connect your wallet to find out!`}
                 </Text>
                 {account && (
                     <>
