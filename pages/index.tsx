@@ -114,11 +114,12 @@ function Home() {
                 {account && (
                     <>
                         <Heading
+                            ref={nameTableRef}
                             textAlign="center"
                             fontSize={[20, 24, 28]}
                             mb={4}
                         >{`${name.prefix} ${name.firstName} ${name.middleName} ${name.lastName}`}</Heading>
-                        <TableContainer ref={nameTableRef} margin="auto" maxW="sm" mb={8}>
+                        <TableContainer margin="auto" maxW="sm" mb={8}>
                             <Table variant="simple">
                                 <Thead>
                                     <Tr>
