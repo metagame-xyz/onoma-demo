@@ -73,8 +73,11 @@ function Home() {
                 <Heading fontSize={[28, 32, 48]} mb={4}>
                     What is Onoma?
                 </Heading>
-                <Text fontSize={[20, 20, 24]} mb={12}>
-                    {`Onoma is an npm package to turn any EVM wallet address into a human-readable name. During Metagame's
+                <Text fontSize={[20, 20, 24]}>
+                    {`Onoma is an npm package to turn any EVM wallet address into a human-readable name.`}
+                </Text>
+                <Text fontSize={[20, 20, 24]} mt={4} mb={12}>
+                    {`During Metagame's
                     work on making transactions easier to read, we noticed a lot of apps use "0x08...8DdF" as the wallet/contract's "name" when an address didn’t have an ENS associated with it.
                     This is much harder to make an association with than a real name, so thought we'd give every wallet
                     a name.`}
